@@ -45,10 +45,11 @@ class EmotionDetector:
 
     def _load_fer2013_model(self):
         """Try to load FER2013 model from common locations"""
+        script_dir = os.path.dirname(os.path.abspath(__file__))
         fer2013_paths = [
-            "models/fer2013_emotion.onnx",
-            "models/emotion_detection.onnx",
-            "models/fer2013_model.onnx"
+            os.path.join(script_dir, "models", "fer2013_emotion.onnx"),
+            os.path.join(script_dir, "models", "emotion_detection.onnx"),
+            os.path.join(script_dir, "models", "fer2013_model.onnx")
         ]
         
         for path in fer2013_paths:
@@ -73,7 +74,8 @@ class EmotionDetector:
 
     def _find_emotion_model(self):
         """Find emotion model in models directory"""
-        models_dir = "models"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        models_dir = os.path.join(script_dir, "models")
         possible_names = [
             "fer2013_emotion.onnx",  # FERPlus model
             "Eff_Net_Quantized.onnx",  # Fallback
