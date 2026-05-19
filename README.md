@@ -229,6 +229,14 @@ This project is open-source. Please cite appropriately for academic use.
 
 Contributions welcome! Please submit issues and pull requests for enhancements.
 
+## 📬 Contact
+
+Have questions or feedback? Let's connect!
+
+**Author:** Rishabh Soni  
+**GitHub:** [Rishabh Soni](https://github.com/rishabhsoni-ai)  
+**Live Demo:** [https://ai-smart-face-analytics-123.streamlit.app/](https://ai-smart-face-analytics-123.streamlit.app/)
+
 ---
 
 **Built with OpenCV, Deep Learning, and Computer Vision expertise**
