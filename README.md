@@ -235,7 +235,7 @@ Have questions or feedback? Let's connect!
 
 **Author:** Rishabh Soni  
 **GitHub:** [Rishabh Soni](https://github.com/rishabhsoni-ai)  
-**Live Demo:** [https://ai-smart-face-analytics-123.streamlit.app/](https://ai-smart-face-analytics-123.streamlit.app/)
+**Live Demo:** [AI Smart Face Analytics](https://ai-smart-face-analytics-123.streamlit.app/)
 
 ---
 
