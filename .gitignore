@@ -6,8 +6,12 @@ results.csv
 *.pkl
 *.jpg
 *.png
-*.onnx
-*.caffemodel
 *.pb
 *.h5
-*.pkl
+
+# Exclude model files EXCEPT those in models/ directory (required for deployment)
+*.onnx
+*.caffemodel
+!models/*.onnx
+!models/*.caffemodel
+!models/*.prototxt
