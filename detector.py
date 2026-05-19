@@ -11,6 +11,7 @@ Version: 1.0
 
 import cv2
 import numpy as np
+import os
 from collections import OrderedDict
 from scipy.spatial import distance as dist
 
@@ -137,7 +138,10 @@ class FaceDetector:
         self.nms_threshold = nms_threshold
 
         # Initialize YuNet face detector
-        model_path = "models/face_detection_yunet.onnx"
+        model_path = os.path.join(os.path.dirname(__file__), "models", "face_detection_yunet.onnx")
+        if not os.path.isfile(model_path):
+            raise FileNotFoundError(f"YuNet model not found at {model_path}. Ensure models are included in the repo.")
+
         self.face_detector = cv2.FaceDetectorYN.create(
             model_path, "", self.input_size,
             self.confidence_threshold, self.nms_threshold, 5000
