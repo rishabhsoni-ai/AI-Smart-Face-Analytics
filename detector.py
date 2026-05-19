@@ -138,10 +138,12 @@ class FaceDetector:
         self.nms_threshold = nms_threshold
 
         # Initialize YuNet face detector
-        model_path = os.path.join(os.path.dirname(__file__), "models", "face_detection_yunet.onnx")
-        if not os.path.isfile(model_path):
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        model_path = os.path.join(script_dir, "models", "face_detection_yunet.onnx")
+        
+        if not os.path.exists(model_path):
             raise FileNotFoundError(f"YuNet model not found at {model_path}. Ensure models are included in the repo.")
-
+        
         self.face_detector = cv2.FaceDetectorYN.create(
             model_path, "", self.input_size,
             self.confidence_threshold, self.nms_threshold, 5000
