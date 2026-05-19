@@ -41,10 +41,11 @@ class MaskDetector:
 
     def _load_mask_model(self):
         """Try to load mask detection model from common locations"""
+        script_dir = os.path.dirname(os.path.abspath(__file__))
         mask_model_paths = [
-            "models/mask_detector.onnx",
-            "models/face_mask_model.onnx",
-            "models/mask_classification.onnx"
+            os.path.join(script_dir, "models", "mask_detector.onnx"),
+            os.path.join(script_dir, "models", "face_mask_model.onnx"),
+            os.path.join(script_dir, "models", "mask_classification.onnx")
         ]
         
         for path in mask_model_paths:
@@ -69,7 +70,8 @@ class MaskDetector:
 
     def _find_mask_model(self):
         """Find mask detection model in models directory"""
-        models_dir = "models"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        models_dir = os.path.join(script_dir, "models")
         possible_names = [
             "mask_detector.onnx",
             "face_mask_model.onnx",
