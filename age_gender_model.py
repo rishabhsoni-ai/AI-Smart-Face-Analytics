@@ -41,7 +41,8 @@ class AgeGenderPredictor:
         self.gender_classes = ['Male', 'Female']
 
         # Model paths
-        self.models_dir = "models"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        self.models_dir = os.path.join(script_dir, "models")
 
         if self.use_onnx:
             # Try to load separate ONNX models
