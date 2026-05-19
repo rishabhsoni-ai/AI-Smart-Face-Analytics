@@ -232,15 +232,3 @@ Contributions welcome! Please submit issues and pull requests for enhancements.
 ---
 
 **Built with OpenCV, Deep Learning, and Computer Vision expertise**
-
-
-
-📬 Contact
-
-Have questions or feedback? Let’s connect!
-
-Author: Rishabh Soni
-
-GitHub: Rishabh Soni
-
-AI Smart Face Analytics Website: https://ai-smart-face-analytics-123.streamlit.app/
